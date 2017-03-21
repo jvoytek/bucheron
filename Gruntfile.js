@@ -8,6 +8,7 @@
 // 'test/spec/**/*.js'
 
 module.exports = function (grunt) {
+  var modRewrite = require('connect-modrewrite');
 
   // Time how long tasks take. Can help when optimizing build times
   require('time-grunt')(grunt);
@@ -40,7 +41,8 @@ module.exports = function (grunt) {
       pug: {
         files: [
           '<%= yeoman.app %>/{,*/}*.pug',
-          '<%= yeoman.app %>/views/{,*/}*.pug'
+          '<%= yeoman.app %>/views/{,*/}*.pug',
+          '<%= yeoman.app %>/recipes/{,*/}*.pug'
         ],
         tasks: ['pug', 'wiredep'],
         options: {
@@ -83,13 +85,14 @@ module.exports = function (grunt) {
         port: 9000,
         // Change this to '0.0.0.0' to access the server from outside.
         hostname: 'localhost',
-        livereload: 35729
+        livereload: 35730
       },
       livereload: {
         options: {
           open: true,
           middleware: function (connect) {
             return [
+              modRewrite(['^[^\\.]*$ /index.html [L]']),
               connect.static('.tmp'),
               connect().use(
                 '/bower_components',
@@ -199,6 +202,13 @@ module.exports = function (grunt) {
             cwd: '<%= yeoman.app %>',
             dest: '<%= yeoman.app %>',
             src: 'views/*.pug',
+            ext: '.html'
+          },
+          {
+            expand: true,
+            cwd: '<%= yeoman.app %>',
+            dest: '<%= yeoman.app %>',
+            src: 'recipes/*.pug',
             ext: '.html'
           }
         ]
