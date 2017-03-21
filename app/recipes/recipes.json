@@ -1,0 +1,197 @@
+[
+  {
+  "name": "Marine Layer",
+  "yields": "Three 4-inch rounds",
+  "X-equipment": null,
+  "ingredients": [
+    {
+      "mini Camembert cheese molds": null,
+      "notes": [
+        "about 4 inches in diameter and 3 inches high"
+      ]
+    },
+    "Large non-reactive stock pot",
+    {
+      "Beverage thermometer": null,
+      "notes": [
+        "with low temperature settings"
+      ]
+    },
+    "Slotted stainless steel spoon",
+    {
+      "Large pan with cooling rack": null,
+      "notes": "or the draining station of your choice"
+    },
+    "Small clean fan",
+    "Disposable food-safe gloves"
+  ],
+  "steps": [
+    {
+      "step": "Make the curd",
+      "X-heading-level": 1
+    },
+    {
+      "step": "Heat and acidify the milk",
+      "X-heading-level": 2
+    },
+    {
+      "step": "Clean and sanitize all of your equipment."
+    },
+    {
+      "step": "Gently pour the milk into the pot and slowly heat to 72-74 degrees F, this should take 15-20 minutes.",
+      "X-times": [
+        {
+          "X-time": 15,
+          "X-time-range": "min",
+          "unit": "min"
+        },
+        {
+          "X-time": 20,
+          "X-time-range": "max",
+          "unit": "min"
+        }
+      ],
+      "X-temps": [
+        {
+          "X-temp": 72,
+          "X-temp-range": "min",
+          "unit": "F"
+        },
+        {
+          "X-temp": 74,
+          "X-temp-range": "max",
+          "unit": "F"
+        }
+      ]
+    },
+    {
+      "step": "Sprinkle the starter culture and the mold powders over the milk and let rehydrate for 5 minutes. Using your slotted spoon gently stir the starter and mold powders into the milk, using an up and down motion to distribute thoroughly.",
+      "X-times": [
+        {
+          "X-time": 5,
+          "unit": "min"
+        }
+      ]
+    },
+    {
+      "step": "Cover the pot and maintain 72-74 degrees F, letting the milk ripen for 30 minutes.",
+      "X-times": [
+        {
+          "X-time": 30,
+          "unit": "min"
+        }
+      ]
+    },
+    {
+      "step": "Gently add the diluted calcium chloride by pouring it through your slotted spoon to distribute it and then gently stir using and up and down motion for 1 minute. Add the diluted rennet in the same way. Cover, maintaining 72-74 degrees F, and ripen until the curds are firm, solid mass and clear whey is floating around the sides. Curd formation should take 12 to 18 hours (usually overnight).",
+      "X-times": [
+        {
+          "X-time": 12,
+          "X-time-range": "min",
+          "unit": "hour"
+        },
+        {
+          "X-time": 18,
+          "X-time-range": "min",
+          "unit": "hours"
+        }
+      ],
+      "notes": [
+        "The indications that the curd is ready to ladle are that it has separated from the sides of the vat and there is a half inch layer of whey on top - plus there are usually cracks in the curd body. The temperature should have held steady throughout the night."
+      ]
+    },
+    {
+      "step": "Fill the Molds & Drain in Molds",
+      "X-heading-level": 2
+    },
+    {
+      "step": "Prepare the draining station with rack and the cheese molds."
+    },
+    {
+      "step": "Ladle thin slices of the curds into the 6 molds in the draining box to fill each equally. Remove the captured whey as you go. Let the curds drain to half the amount (about 4 hours)",
+      "X-times": [
+        {
+          "X-time": 4,
+          "unit": "hours"
+        }
+      ]
+    },
+    {
+      "step": "Dust/Salt & Drain",
+      "X-heading-level": 2
+    },
+    {
+      "step": "Salt the top of each with ¼ tsp of salt."
+    },
+    {
+      "step": "Dust the tops of three of the cheeses with a thin layer of the salted vegetable ash. You will not need all of the ash mixture for this step. Gently pat the ash into the curd."
+    },
+    {
+      "step": "Carefully flip the remaining three molds of curds on the tops of the three ash-covered ones, creating a sandwich. Gently pat the curds down into the mold to remove any spaces. Add another ¼ tsp of salt to the tops of the cheeses (should be the un-salted side)."
+    },
+    {
+      "step": "Cover the molds with cheesecloth and let the cheese drain for 48 hours at room temperature.",
+      "X-times": [
+        {
+          "X-time": 48,
+          "unit": "hours"
+        }
+      ],
+      "notes": [
+        "Remove any collected whey a few times while draining. Wipe out the draining box with a paper towel each time you drain it of excess whey.",
+        "Flip the cheese in their molds when they are firm enough to handle, after about 12 hours, then twice more during the remaining 36 hours. This will aid in a uniform formation of the cheeses and the development of the bacteria.",
+        "Once the cheese has stopped draining and the curds have compressed to below the halfway point of the mold, remove the molds."
+      ]
+    },
+    {
+      "step": "Dust the top, bottom, and sides of the cheeses with vegetable ash, coating lightly but completely. Gently pat and rub the ash into the surface."
+    },
+    {
+      "step": "Place the cheese at least 1 inch apart on a clean mat in the ripening box. Cover with cheesecloth and let stand at room temperature for 24 hours to start the bacterial action.",
+      "notes": [
+        "If the cheese seems wet position a small (clean) fan next to the open box to dry the outside of the cheese (if the surface stays wet or the cheese shrinks significantly after the growth of p. Candidum on the outside the skin might slip (form pockets under the skin, it’s still safe to eat, just less appetizing)."
+      ],
+      "X-times": [
+        {
+          "X-time": 24,
+          "unit": "hours"
+        }
+      ]
+    },
+    {
+      "step": "Affinage",
+      "X-heading-level": 1,
+      "notes": [
+        "Drain and wipe out any moisture from the box, cover with the lid, and then ripen at 50 degrees F to 55 degrees F and 85% humidity for a total of 3-5 weeks (depending on your desired ripeness.",
+        "Continue to turn the cheese daily. By about 5 days (usually sooner), you should see a white fuzzy mold growing on top of the ash.",
+        "You can occasionally pat down the white mold to keep the rind from becoming too thick."
+      ],
+      "X-times": [
+        {
+          "X-time": 10,
+          "X-time-range": "min",
+          "unit": "day"
+        },
+        {
+          "X-time": 14,
+          "X-time-range": "max",
+          "unit": "day"
+        }
+      ]
+    },
+    {
+      "step": "After 10 to 14 days the cheese will be fully coated in white mold. Wrap in cheese paper and return to the ripening box. Continue to age at 50-55 degrees F and 85% humidity until you achieve your desired degree of ripeness.",
+      "notes": [
+        "Note, after wrapping humidity is less of a concern since the paper will insulate the cheese from minor changes in humidity"
+      ]
+    },
+    {
+      "step": "After 3-5 weeks (depending on your desired ripeness) from the start of ripening, store the cheeses in the refrigerator."
+    },
+    {
+      "step": "Consume within 2 weeks of storing."
+    }
+  ]
+},
+  {"name": "Mozzarella"}
+]

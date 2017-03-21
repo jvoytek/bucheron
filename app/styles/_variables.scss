@@ -380,12 +380,12 @@ $navbar-default-link-disabled-bg:          transparent !default;
 
 // Navbar brand label
 $navbar-default-brand-color:               $navbar-default-link-color !default;
-$navbar-default-brand-hover-color:         #fff !default;
+$navbar-default-brand-hover-color:         $gray-light !default;
 $navbar-default-brand-hover-bg:            none !default;
 
 // Navbar toggle
 $navbar-default-toggle-hover-bg:           $navbar-default-link-hover-bg !default;
-$navbar-default-toggle-icon-bar-bg:        #fff !default;
+$navbar-default-toggle-icon-bar-bg:        $navbar-default-link-color !default;
 $navbar-default-toggle-border-color:       transparent !default;
 
 

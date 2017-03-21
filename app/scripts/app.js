@@ -16,7 +16,8 @@ angular
 		'ngRoute',
 		'ngSanitize',
 		'ngTouch',
-		'ui.router'
+		'ui.router',
+		'RecipesModule'
 	])
 	.config(function ($stateProvider, $locationProvider) {
 		$locationProvider.html5Mode(true);
@@ -45,7 +46,7 @@ angular
 					},
 					'main': {
 						templateUrl: 'views/recipes.html',
-						controller: 'RecipesCtrl'
+						controller: 'RecipesController'
 					}
 				}
 			});
