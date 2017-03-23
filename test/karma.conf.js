@@ -5,6 +5,20 @@ module.exports = function(config) {
   'use strict';
 
   config.set({
+
+    preprocessors: {
+      'app/scripts/**/!(dispatcher).js': 'coverage'
+    },
+
+    reporters: ['coverage', 'spec'],
+
+    coverageReporter: {
+      reporters: [
+        { type: 'html'},
+        { type: 'text-summary'}
+      ]
+    },
+
     // enable / disable watching file and executing tests whenever any file changes
     autoWatch: true,
 
@@ -30,8 +44,11 @@ module.exports = function(config) {
       'bower_components/angular-sanitize/angular-sanitize.js',
       'bower_components/angular-touch/angular-touch.js',
       'bower_components/angular-ui-router/release/angular-ui-router.js',
+      'bower_components/lodash/lodash.js',
+      'bower_components/flux/dist/Flux.js',
       'bower_components/angular-mocks/angular-mocks.js',
       // endbower
+      'app/scripts/**/*.module.js',
       'app/scripts/**/*.js',
       'test/mock/**/*.js',
       'test/spec/**/*.js'
@@ -39,6 +56,7 @@ module.exports = function(config) {
 
     // list of files / patterns to exclude
     exclude: [
+        'app/scripts/dispatcher/Dispatcher.js'
     ],
 
     // web server port
@@ -53,13 +71,16 @@ module.exports = function(config) {
     // - PhantomJS
     // - IE (only Windows)
     browsers: [
-      'PhantomJS'
+      'Chrome'
     ],
 
     // Which plugins to enable
     plugins: [
+      'karma-chrome-launcher',
       'karma-phantomjs-launcher',
-      'karma-jasmine'
+      'karma-jasmine',
+      'karma-coverage',
+      'karma-spec-reporter'
     ],
 
     // Continuous Integration mode

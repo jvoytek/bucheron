@@ -1,9 +1,9 @@
 'use strict';
 
-describe('Controller: RecipesCtrl', function () {
+describe('Controller: RecipesController', function () {
 
 	// load the controller's module
-	beforeEach(module('bucheron'));
+	beforeEach(module('RecipesModule'));
 
 	var RecipesCtrl,
 		scope;
@@ -11,13 +11,16 @@ describe('Controller: RecipesCtrl', function () {
 	// Initialize the controller and a mock scope
 	beforeEach(inject(function ($controller, $rootScope) {
 		scope = $rootScope.$new();
-		RecipesCtrl = $controller('RecipesCtrl', {
+		RecipesCtrl = $controller('RecipesController', {
 			$scope: scope
 			// place here mocked dependencies
 		});
 	}));
 
-	it('should attach a list of awesomeThings to the scope', function () {
-		expect(RecipesCtrl.awesomeThings.length).toBe(3);
-	});
+	it('should get the list of recipes on "recipes.changed"', inject(function (RecipesStore) {
+		RecipesStore.testing.setRecipes([[{name:'First Recipe'},{name: 'Second Recipe'}]]);
+		scope.$broadcast('recipes.changed');
+		expect(scope.recipesArray.length).toBe(1);
+		expect(scope.recipesArray[0].length).toBe(2);
+	}));
 });
