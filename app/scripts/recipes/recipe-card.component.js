@@ -9,9 +9,12 @@
  */
 function RecipeCardController($scope) {
 	var ctrl = this;
+
 	this.$onInit = function() {
+		var recipeName = ctrl.recipe.name;
 		$scope.recipe = ctrl.recipe;
-		$scope.descriptionTempalte = 'recipes/' + ctrl.recipe.name.toLowerCase().replace(' ', '-') + '.html';
+		$scope.descriptionTempalte = 'recipes/' + recipeName.toLowerCase().replace(' ', '-') + '.html';
+		$scope.imageSource = ctrl.recipe.imageSource;
 	};
 }
 

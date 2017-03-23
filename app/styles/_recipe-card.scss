@@ -1,2 +1,26 @@
-.recipe-card {
+recipe-card {
+  a.recipe-card {
+    margin-bottom: $grid-gutter-width;
+    text-decoration: none;
+  }
+
+  .name {
+    @extend h3;
+    margin: 0;
+  }
+
+  .thumbnail {
+    height: 300px;
+    background-position: center;
+    background-size: cover;
+  }
+
+  .caption {
+    background-color: rgba(30,30,30,.5);
+    color: #FFF;
+    height: 75px;
+    margin-top: -96px;
+    padding: $thumbnail-caption-padding;
+    border: 1px solid transparent;
+  }
 }

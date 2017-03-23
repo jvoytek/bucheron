@@ -31,11 +31,21 @@ html
     // endbuild
 
     // build:js({.tmp,app}) scripts/scripts.js
+    script(src="scripts/dispatcher/dispatcher.service.js")
     script(src="scripts/app.js")
     script(src="scripts/main.controller.js")
+    script(src="scripts/recipes/skill-levels.module.js")
+    script(src="scripts/recipes/recipes-actions.module.js")
     script(src="scripts/recipes/recipes.module.js")
     script(src="scripts/recipes/recipes.controller.js")
-    script(src="scripts/recipes/recipes.factory.js")
+    script(src="scripts/recipes/recipes.actions.js")
+    script(src="scripts/recipes/recipes.service.js")
+    script(src="scripts/recipes/recipes.store.js")
     script(src="scripts/recipes/recipe-card.component.js")
+    script(src="scripts/recipes/recipe-time.component.js")
+    script(src="scripts/recipes/skill-levels.constant.js")
+    script(src="scripts/recipes/skill-level.filter.js")
+    script(src="scripts/recipes/skill-level-filter.component.js")
+    script(src="scripts/recipes/name-filter.component.js")
     script(src="scripts/header.controller.js")
     // endbuild

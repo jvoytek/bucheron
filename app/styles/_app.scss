@@ -5,6 +5,12 @@
   padding: 0.2em 0;
 }
 
+.ellipses {
+  white-space: nowrap;
+  overflow:hidden;
+  text-overflow: ellipsis;
+}
+
 body {
   padding: 0;
 }
@@ -63,9 +69,6 @@ body {
 
 /* Responsive: Portrait tablets and up */
 @media screen and (min-width: 768px) {
-  .container {
-    max-width: 730px;
-  }
 
   /* Remove the padding we set earlier */
   .header,

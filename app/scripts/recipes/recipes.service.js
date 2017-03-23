@@ -8,7 +8,7 @@
  * Service for getting recipes in the RecipesModule.
  */
 angular.module('RecipesModule')
-	.factory('RecipesService', function ($http, $rootScope) {
+	.factory('RecipesService', function ($http, RecipesActions) {
 		var recipesArray;
 
 		function _addScrapedRecipes() {
@@ -17,22 +17,34 @@ angular.module('RecipesModule')
 				url: '/recipes/cheese-making-com.json'
 			}).then(function(response) {
 				recipesArray = _.concat(recipesArray, response.data);
-				_broadcastRecipesUpdated();
+				_dispatchRecipesUpdated();
 			});
 		}
+
+		function _normalizeYamlRecipes(recipes) {
+			angular.forEach(recipes, function(recipe){
+				if (recipe.recipe_name) {
+					recipe.name = recipe.recipe_name;
+					recipe.skillLevel = recipe['X-skill-level'];
+					recipe.imageSource = recipe['X-image-url'];
+				}
+			});
+			return recipes;
+		}
+
 		// Service logic
 		function _fetchRecipes() {
 			$http({
 				method: 'GET',
 				url: '/recipes/recipes.json'
 			}).then(function(response) {
-				recipesArray = response.data;
+				recipesArray = _normalizeYamlRecipes(response.data);
 				_addScrapedRecipes();
 			});
 		}
 
-		function _broadcastRecipesUpdated() {
-			$rootScope.$broadcast('recipes.updated');
+		function _dispatchRecipesUpdated() {
+			RecipesActions.setRecipes(recipesArray);
 		}
 
 		function _getRecipes() {

@@ -1,4 +1,13 @@
 recipe_name: Marine Layer
+X-skill-level: Int.
+X-image-url: images/1-IMG_3338.JPG
+X-affinage-times:
+  - X-time: 3
+    X-time-range: min
+    unit: week
+  - X-time: 5
+    X-time-range: max
+    unit: week
 yields: Three 4-inch rounds
 X-equipment:
 ingredients:

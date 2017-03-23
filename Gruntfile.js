@@ -29,6 +29,23 @@ module.exports = function (grunt) {
   // Define the configuration for all the tasks
   grunt.initConfig({
 
+    'browserify': {
+      options: {
+        debug: true
+      },
+      dev: {
+        src: '<%= yeoman.app %>/scripts/dispatcher/Dispatcher.js',
+        dest: '<%= yeoman.app %>/scripts/dispatcher/dispatcher.service.js'
+      },
+      production: {
+        options: {
+          debug: false
+        },
+        src: '<%= yeoman.app %>/scripts/dispatcher/Dispatcher.service.js',
+        dest: 'dist/scripts/dispatcher.service.js'
+      }
+    },
+
     // Project settings
     yeoman: appConfig,
 
@@ -140,7 +157,8 @@ module.exports = function (grunt) {
       all: {
         src: [
           'Gruntfile.js',
-          '<%= yeoman.app %>/scripts/{,*/}*.js'
+          '<%= yeoman.app %>/scripts/{,*/}*.js',
+          '!<%= yeoman.app %>/scripts/dispatcher/dispatcher.service.js'
         ]
       },
       test: {
@@ -160,7 +178,8 @@ module.exports = function (grunt) {
       all: {
         src: [
           'Gruntfile.js',
-          '<%= yeoman.app %>/scripts/{,*/}*.js'
+          '<%= yeoman.app %>/scripts/{,*/}*.js',
+          '!<%= yeoman.app %>/scripts/dispatcher/dispatcher.service.js'
         ]
       },
       test: {
@@ -516,6 +535,7 @@ module.exports = function (grunt) {
       'wiredep',
       'concurrent:server',
       'postcss:server',
+      'browserify:dev',
       'connect:livereload',
       'watch'
     ]);
@@ -529,6 +549,7 @@ module.exports = function (grunt) {
   grunt.registerTask('test', [
     'clean:server',
     'pug',
+    'browserify:dev',
     'wiredep',
     'concurrent:test',
     'postcss',
@@ -539,6 +560,7 @@ module.exports = function (grunt) {
   grunt.registerTask('build', [
     'clean:dist',
     'pug',
+    'browserify',
     'wiredep',
     'useminPrepare',
     'concurrent:dist',

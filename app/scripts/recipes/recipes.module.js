@@ -7,4 +7,4 @@
  * # recipes module
  * Controllers and services to run the recipes
  */
-angular.module('RecipesModule', []);
+angular.module('RecipesModule', ['RecipesModule.RecipesActionsModule', 'RecipesModule.SkillLevelsModule', 'dispatchModule']);

@@ -1,1 +1,8 @@
-recipe-card(ng-repeat="recipe in recipesArray" recipe="recipe")
+form#recipes-search-form.form-inline
+  skill-level-filter
+  name-filter
+  .form-group.pull-right
+    | {{numRecipes}} recipes found
+
+.row(ng-repeat="row in recipesArray")
+  recipe-card(ng-repeat="recipe in row" recipe="recipe")

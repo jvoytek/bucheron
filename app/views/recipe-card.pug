@@ -1,6 +1,5 @@
-.recipe-card
-  .panel.panel-default
-    .panel-heading {{recipe.name}}
-    .panel-body(ng-include="descriptionTempalte")
-    .list-group
-      .list-group-item {{recipe.name}}
+a.recipe-card.col-md-3(ng-href="{{recipe.url}}" target="_blank")
+  .thumbnail(ng-style="{'background-image':'url(\"' + imageSource + '\")'}")
+  .caption
+    .name.ellipses {{recipe.name}}
+    | Skill level: {{recipe.skillLevel | skillLevel}}

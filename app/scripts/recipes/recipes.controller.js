@@ -8,13 +8,15 @@
  * Controller of the RecipesModule
  */
 angular.module('RecipesModule')
-	.controller('RecipesController', function ($scope, RecipesService) {
+	.controller('RecipesController', function ($scope, RecipesService, RecipesStore) {
+
 
 		function _getNewRecipes() {
-			$scope.recipesArray = RecipesService.getRecipes();
+			$scope.recipesArray = RecipesStore.getRecipes();
+			$scope.numRecipes = RecipesStore.getNumRecipes();
 		}
 
-		$scope.$on('recipes.updated', _getNewRecipes);
+		$scope.$on('recipes.changed', _getNewRecipes);
 
 		_getNewRecipes();
 	});

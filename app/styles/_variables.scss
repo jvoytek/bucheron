@@ -145,9 +145,9 @@ $table-border-color:            #ddd !default;
 
 $btn-font-weight:                normal !default;
 
-$btn-default-color:              #fff !default;
-$btn-default-bg:                 $gray-darker !default;
-$btn-default-border:             $btn-default-bg !default;
+$btn-default-color:              $gray-darker !default;
+$btn-default-bg:                 #FFF !default;
+$btn-default-border:             #ccc !default;
 
 $btn-primary-color:              $btn-default-color !default;
 $btn-primary-bg:                 $brand-primary !default;
@@ -747,7 +747,7 @@ $thumbnail-padding:           4px !default;
 //** Thumbnail background color
 $thumbnail-bg:                $body-bg !default;
 //** Thumbnail border color
-$thumbnail-border:            #ddd !default;
+$thumbnail-border:            transparent !default;
 //** Thumbnail border radius
 $thumbnail-border-radius:     $border-radius-base !default;
 

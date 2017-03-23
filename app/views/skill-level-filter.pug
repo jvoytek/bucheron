@@ -1,0 +1,13 @@
+.form-group
+  .btn-group
+    button.btn.btn-default.dropdown-toggle(type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false")
+      | Skill level: {{skillLevelFilter}}
+      |
+      span.caret
+    ul.dropdown-menu
+      li
+        a(href="javascript:void(0)" ng-click="setSkillLevelFilter('All')")
+          | All
+      li(ng-repeat="level in skillLevels")
+        a(href="javascript:void(0)" ng-click="setSkillLevelFilter(level)")
+          | {{level}}
