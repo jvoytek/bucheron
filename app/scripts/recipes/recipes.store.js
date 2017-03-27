@@ -89,7 +89,7 @@ angular.module('RecipesModule')
 		return {
 			testing: {
 				getNameFilter : function() { return nameFilter; },
-				setRecipes: function(recipesArray) { filteredRecipesArray = recipesArray;}
+				getSkillLevelFilter : function() { return skillLevelFilter; }
 			},
 			dispatchToken: dispatchToken,
 			getRecipes: _getRecipes,

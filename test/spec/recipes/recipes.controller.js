@@ -17,9 +17,8 @@ describe('Controller: RecipesController', function () {
 		});
 	}));
 
-	it('should get the list of recipes on "recipes.changed"', inject(function (RecipesStore) {
-		RecipesStore.testing.setRecipes([[{name:'First Recipe'},{name: 'Second Recipe'}]]);
-		scope.$broadcast('recipes.changed');
+	it('should get the list of recipes on "recipes.changed"', inject(function (RecipesActions) {
+		RecipesActions.setRecipes([{name:'First Recipe', skillLevel:'Beg.'},{name: 'Second Recipe', skillLevel:'Int.'}]);
 		expect(scope.recipesArray.length).toBe(1);
 		expect(scope.recipesArray[0].length).toBe(2);
 	}));

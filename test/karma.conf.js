@@ -7,7 +7,7 @@ module.exports = function(config) {
   config.set({
 
     preprocessors: {
-      'app/scripts/**/!(dispatcher).js': 'coverage'
+      'app/scripts/**/!(dispatcher|dispatcher.service).js': 'coverage'
     },
 
     reporters: ['coverage', 'spec'],

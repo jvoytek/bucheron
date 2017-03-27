@@ -33,9 +33,9 @@ function RecipeTimeDisplayController($scope) {
 
 angular.module('RecipesModule')
 	.component('recipeTimeDisplay', {
-		template: '<span ng-if="min">{{min}}-{{max}} {{units}}</span><span ng-if="!min">{{max}} {{units}}</span>',
+		template: '<span ng-if="min">{{min}}-{{max}} {{units}}</span><span ng-if="!min && max">{{max}} {{units}}</span>',
 		controller: RecipeTimeDisplayController,
 		bindings: {
-			times: '='
+			times: '<'
 		}
 	});

@@ -18,9 +18,9 @@ recipe-card {
   .caption {
     background-color: rgba(30,30,30,.5);
     color: #FFF;
-    height: 75px;
-    margin-top: -96px;
+    height: 90px;
+    margin-top: -111px;
     padding: $thumbnail-caption-padding;
-    border: 1px solid transparent;
+    border: none;
   }
 }

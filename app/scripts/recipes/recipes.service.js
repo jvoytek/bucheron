@@ -47,14 +47,12 @@ angular.module('RecipesModule')
 			RecipesActions.setRecipes(recipesArray);
 		}
 
-		function _getRecipes() {
-			return recipesArray;
-		}
-
 		_fetchRecipes();
 
 		// Public API here
 		return {
-			getRecipes: _getRecipes
+			testing: {
+				normalizeYamlRecipes: _normalizeYamlRecipes
+			}
 		};
 	});

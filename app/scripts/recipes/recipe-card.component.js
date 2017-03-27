@@ -10,12 +10,14 @@
 function RecipeCardController($scope) {
 	var ctrl = this;
 
-	this.$onInit = function() {
-		var recipeName = ctrl.recipe.name;
+	function _initializeScopedVariables() {
 		$scope.recipe = ctrl.recipe;
-		$scope.descriptionTempalte = 'recipes/' + recipeName.toLowerCase().replace(' ', '-') + '.html';
-		$scope.imageSource = ctrl.recipe.imageSource;
+	}
+
+	this.$onInit = function() {
+		_initializeScopedVariables();
 	};
+
 }
 
 angular.module('RecipesModule')
@@ -23,6 +25,6 @@ angular.module('RecipesModule')
 		templateUrl: 'views/recipe-card.html',
 		controller: RecipeCardController,
 		bindings: {
-			recipe: '='
+			recipe: '<'
 		}
 	});

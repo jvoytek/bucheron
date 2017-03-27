@@ -1,5 +1,8 @@
 a.recipe-card.col-md-3(ng-href="{{recipe.url}}" target="_blank")
-  .thumbnail(ng-style="{'background-image':'url(\"' + imageSource + '\")'}")
+  .thumbnail(ng-style="{'background-image':'url(\"' + recipe.imageSource + '\")'}")
   .caption
     .name.ellipses {{recipe.name}}
-    | Skill level: {{recipe.skillLevel | skillLevel}}
+    | Skill level: {{recipe.skillLevel}}
+    div(ng-if="recipe['X-affinage-times']")
+      | Affinage:
+      recipe-time-display(times="recipe['X-affinage-times']")

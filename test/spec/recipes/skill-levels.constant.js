@@ -3,7 +3,7 @@
 describe('Service: skillLevels', function () {
 
 	// load the service's module
-	beforeEach(module('bucheron'));
+	beforeEach(module('RecipesModule'));
 
 	// instantiate service
 	var skillLevels;
@@ -12,7 +12,9 @@ describe('Service: skillLevels', function () {
 	}));
 
 	it('should do something', function () {
-		expect(!!skillLevels).toBe(true);
+		expect(skillLevels['Beg.']).toBe('Beginner');
+		expect(skillLevels['Int.']).toBe('Intermediate');
+		expect(skillLevels['Adv.']).toBe('Advanced');
 	});
 
 });

@@ -15,8 +15,9 @@ describe('Component: nameFilter', function () {
 		});
 	}));
 
-	it('should set the name filter', inject(function (RecipesStore) {
-		scope.setNameFilter("Intermediate");
-		expect(RecipesStore.testing.getNameFilter()).toBe("Intermediate");
+	it('should set the name filter', inject(function (RecipesStore, RecipesActions) {
+		RecipesActions.setRecipes([{name:'Cheese 1', skillLevel:'Beg.'}]);
+		scope.setNameFilter('Intermediate');
+		expect(RecipesStore.testing.getNameFilter()).toBe('Intermediate');
 	}));
 });
