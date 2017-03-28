@@ -7,7 +7,7 @@ version 0.15.1.
 
 ## Build & development
 
-You will need bower and npm installed.
+You will need bower, npm, grunt-cli, and compass installed.
 
 ### Basic Setup
 
